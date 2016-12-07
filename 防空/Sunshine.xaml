@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="防空.Sunshine"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <!--<Viewport3D>-->
+        <Viewport2DVisual3D x:Name="viewport">
+            <Viewport2DVisual3D.Geometry>
+                <!--<MeshGeometry3D Positions="-1,0,0,0,3,0,1,0,0" TriangleIndices="0,2,1" ></MeshGeometry3D>-->
+                <MeshGeometry3D x:Name="mesh"  Positions="0,1,-800,0,-1,-800,12,-1,-1,12,1,-1" TriangleIndices="0,1,2 0,2,3" TextureCoordinates="0,0 0,1 1,1 1,0"></MeshGeometry3D>
+            </Viewport2DVisual3D.Geometry>
+            <Viewport2DVisual3D.Material>
+                <DiffuseMaterial Viewport2DVisual3D.IsVisualHostMaterial="True"></DiffuseMaterial>
+            </Viewport2DVisual3D.Material>
+            <Viewport2DVisual3D.Visual>
+                <Border  BorderThickness="0">
+
+                    <!--<Button>asf</Button>-->
+                    
+                        <Rectangle Width="12" Height="2">
+                            <Rectangle.Fill>
+                                <LinearGradientBrush>
+                                    <GradientStop Offset="0" Color="White"></GradientStop>
+                                    <GradientStop Offset="0.99" Color="Transparent"></GradientStop>
+                                </LinearGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+
+                        <!--<Rectangle x:Name="rect" Width="1" Height="1" Opacity="1" >
+                        <Rectangle.Fill>
+                            <LinearGradientBrush>
+                                <GradientStop Color="White" Offset="0"></GradientStop>
+                                <GradientStop Color="Transparent" Offset="1"></GradientStop>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>-->
+                    
+
+                </Border>
+            </Viewport2DVisual3D.Visual>
+            <Viewport2DVisual3D.Transform>
+                <Transform3DGroup>
+                    <RotateTransform3D>
+                        <RotateTransform3D.Rotation>
+                            <AxisAngleRotation3D x:Name="rotate" Angle="10" Axis="0,0,1"></AxisAngleRotation3D>
+                        </RotateTransform3D.Rotation>
+                    </RotateTransform3D>
+                    <TranslateTransform3D x:Name="offset" OffsetX="0" OffsetY="0" OffsetZ="-50"></TranslateTransform3D>
+                </Transform3DGroup>
+            </Viewport2DVisual3D.Transform>
+        </Viewport2DVisual3D>
+    <!--</Viewport3D>-->
+</UserControl>
