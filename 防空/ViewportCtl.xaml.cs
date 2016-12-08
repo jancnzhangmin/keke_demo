@@ -106,17 +106,24 @@ namespace 防空
                 //roate.FillBehavior = FillBehavior.HoldEnd;
                 //roatetimer.Start();
                 time_step++;
-                if (time_step > 10)
+                if (time_step % 1 == 0)
                 {
                     roate.From = 0;
                     roate.To = RoateValue;
                     roate.Duration = TimeSpan.FromSeconds(0.5);
-                    time_step = 0;
                 }
-                else if(time_step>2)
+                 if(time_step%5 == 0)
                 {
+                    roate.From = 0;
                     roate.To = -360;
                     roate.Duration = TimeSpan.FromSeconds(0.5);
+                    //sunshine();
+                }
+                 if (time_step > 10)
+                {
+                    time_step = 0;
+                    sunshine();
+                    
                 }
                 
                 rotate.BeginAnimation(AxisAngleRotation3D.AngleProperty, roate);
@@ -124,9 +131,9 @@ namespace 防空
 
 
 
-            timer.Interval = rand.Next(400, 500);
+            timer.Interval = rand.Next(1000, 2000);
 
-            follow_move();
+            //follow_move();
         }
 
 
@@ -148,12 +155,54 @@ namespace 防空
                         offY.Duration = TimeSpan.FromSeconds(1);
                         offset.BeginAnimation(TranslateTransform3D.OffsetYProperty, offY);
                         DoubleAnimation roate = new DoubleAnimation();
+                        roate.From = 0;
                         roate.To = -360;
                         roate.Duration = TimeSpan.FromSeconds(1);
                         rotate.BeginAnimation(AxisAngleRotation3D.AngleProperty, roate);
                     }
                 }
             }));
+        }
+
+
+        private void sunshine()
+        {
+            DoubleAnimation an1 = new DoubleAnimation();
+            an1.From = -1;
+            an1.To = 2;
+            an1.Duration = TimeSpan.FromSeconds(10);
+            s1.BeginAnimation(GradientStop.OffsetProperty, an1);
+
+            DoubleAnimation an2 = new DoubleAnimation();
+            an2.From = -0.5;
+            an2.To = 2.5;
+            an2.Duration = TimeSpan.FromSeconds(10);
+            s2.BeginAnimation(GradientStop.OffsetProperty, an2);
+
+            DoubleAnimation an3 = new DoubleAnimation();
+            an3.From = 0;
+            an3.To = 3;
+            an3.Duration = TimeSpan.FromSeconds(10);
+            s3.BeginAnimation(GradientStop.OffsetProperty, an3);
+
+            //DoubleAnimation an4 = new DoubleAnimation();
+            //an4.From = -0.7;
+            //an4.To = 2.3;
+            //an4.Duration = TimeSpan.FromSeconds(10);
+            //s4.BeginAnimation(GradientStop.OffsetProperty, an4);
+
+            //DoubleAnimation an5 = new DoubleAnimation();
+            //an5.From = -0.5;
+            //an5.To = 2.5;
+            //an5.Duration = TimeSpan.FromSeconds(10);
+            //s5.BeginAnimation(GradientStop.OffsetProperty, an5);
+
+            //DoubleAnimation an6 = new DoubleAnimation();
+            //an6.From = -0.3;
+            //an6.To = 2.7;
+            //an6.Duration = TimeSpan.FromSeconds(10);
+            //s6.BeginAnimation(GradientStop.OffsetProperty, an6);
+            
         }
 
 
@@ -281,12 +330,22 @@ namespace 防空
             {
                 Viewport3D v3d = MainWindow.FindChild<Viewport3D>(Application.Current.MainWindow, "viewconter");
                 double xishu = 0.16d * Math.Pow(offset.OffsetZ, 2) + 10.2d * offset.OffsetZ + 232d;
-                offset.OffsetX += e.GetPosition(v3d).X / xishu;
-                offset.OffsetY += e.GetPosition(v3d).Y / xishu;
+                offset.OffsetX += (e.GetPosition(v3d).X-oldpoint.X) / xishu/50d;
+                offset.OffsetY -= (e.GetPosition(v3d).Y-oldpoint.Y) / xishu/50d;
 
                 PublicClass.Offset_move.X += e.GetPosition(v3d).X;
                 PublicClass.Offset_move.Y += e.GetPosition(v3d).Y;
+
+
+                //offset.OffsetX+=e.GetPosition()
+
+
             }
+        }
+
+        private void picturename_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show(this.Name.ToString() + ",offx=" + offset.OffsetX + ",offy=" + offset.OffsetY);
         }
 
 

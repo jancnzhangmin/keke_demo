@@ -82,17 +82,23 @@ namespace 防空
 
 
             PublicClass.Offset_Sin offset_sin1 = new PublicClass.Offset_Sin();
-            offset_sin1.offset = new Point3D(-2.9, -1, -5);
+            offset_sin1.offset = new Point3D(-2.9, -1.6, -5);
             PublicClass.Offset_Sin offset_sin2 = new PublicClass.Offset_Sin();
-            offset_sin2.offset = new Point3D(-4.5, 0, -10);
+            offset_sin2.offset = new Point3D(-4.5, -1, -10);
             PublicClass.Offset_Sin offset_sin3 = new PublicClass.Offset_Sin();
-            offset_sin3.offset = new Point3D(-8.2, -0.2, -20);
+            offset_sin3.offset = new Point3D(-8.2, -2, -20);
             PublicClass.Offset_Sin offset_sin4 = new PublicClass.Offset_Sin();
-            offset_sin4.offset = new Point3D(-7.8, -2.6, -20);
+            offset_sin4.offset = new Point3D(-7.8, -4, -20);
             PublicClass.Offset_Sin offset_sin5 = new PublicClass.Offset_Sin();
-            offset_sin5.offset = new Point3D(-6.5, 0.8, -30);
+            offset_sin5.offset = new Point3D(-6.5, -1, -30);
             PublicClass.Offset_Sin offset_sin6 = new PublicClass.Offset_Sin();
-            offset_sin6.offset = new Point3D(-4.4, -1.3, -20);
+            offset_sin6.offset = new Point3D(-4.4, -2.5, -20);
+            PublicClass.Offset_Sin offset_sin7 = new PublicClass.Offset_Sin();
+            offset_sin7.offset = new Point3D(-4, -3.5, -10);
+            PublicClass.Offset_Sin offset_sin8 = new PublicClass.Offset_Sin();
+            offset_sin8.offset = new Point3D(-4.4, -2.5, -20);
+            PublicClass.Offset_Sin offset_sin9 = new PublicClass.Offset_Sin();
+            offset_sin9.offset = new Point3D(-4.4, -2.5, -20);
             //offset_sin1
 
             ViewportCtl view1 = new ViewportCtl();
@@ -107,8 +113,8 @@ namespace 防空
             view1.mesh.Positions.Add(p2);
             view1.mesh.Positions.Add(p3);
             view1.mesh.Positions.Add(p4);
-            view1.offset.OffsetX = -2.9;
-            view1.offset.OffsetY = -1;
+            view1.offset.OffsetX = -3.96;
+            view1.offset.OffsetY = -1.39;
             view1.offset.OffsetZ = -5;
             view1.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\99式主战坦克.jpg", UriKind.RelativeOrAbsolute));
             bitimg.BeginInit();
@@ -141,8 +147,8 @@ namespace 防空
             view2.mesh.Positions.Add(p2);
             view2.mesh.Positions.Add(p3);
             view2.mesh.Positions.Add(p4);
-            view2.offset.OffsetX = -4.5;
-            view2.offset.OffsetY = 0;
+            view2.offset.OffsetX = -5.65;
+            view2.offset.OffsetY = -0.14;
             view2.offset.OffsetZ = -10;
             view2.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\09IV战略导弹核潜艇.jpg", UriKind.RelativeOrAbsolute));
             offset_sin2.uuid = view2.guid;
@@ -159,8 +165,8 @@ namespace 防空
             view3.mesh.Positions.Add(p2);
             view3.mesh.Positions.Add(p3);
             view3.mesh.Positions.Add(p4);
-            view3.offset.OffsetX = -8.2;
-            view3.offset.OffsetY = -0.2;
+            view3.offset.OffsetX = -9.9;
+            view3.offset.OffsetY = -0.4;
             view3.offset.OffsetZ = -20;
             view3.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\10月14日11时25分，中国在太原卫星发射中心用“长征二号丙”运载火箭，以”一箭双星“方式，成功将“实践九号”AB卫星发射升空并送入预定转移轨道。这是中国“长征”系列运载火箭第169次航天发射。.jpg", UriKind.RelativeOrAbsolute));
             offset_sin3.uuid = view3.guid;
@@ -179,8 +185,8 @@ namespace 防空
             view4.mesh.Positions.Add(p2);
             view4.mesh.Positions.Add(p3);
             view4.mesh.Positions.Add(p4);
-            view4.offset.OffsetX = -7.8;
-            view4.offset.OffsetY = -2.6;
+            view4.offset.OffsetX = -9.7;
+            view4.offset.OffsetY = -2.3;
             view4.offset.OffsetZ = -20;
             view4.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\25_153085_7b996e5356a307b.jpg", UriKind.RelativeOrAbsolute));
             offset_sin4.uuid = view4.guid;
@@ -197,8 +203,8 @@ namespace 防空
             view5.mesh.Positions.Add(p2);
             view5.mesh.Positions.Add(p3);
             view5.mesh.Positions.Add(p4);
-            view5.offset.OffsetX = -6.5;
-            view5.offset.OffsetY = 0.8;
+            view5.offset.OffsetX = -9.5;
+            view5.offset.OffsetY = 0.01;
             view5.offset.OffsetZ = -30;
             view5.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\051C驱逐舰首舰“沈阳”号.jpg", UriKind.RelativeOrAbsolute));
             offset_sin5.uuid = view5.guid;
@@ -215,12 +221,69 @@ namespace 防空
             view6.mesh.Positions.Add(p2);
             view6.mesh.Positions.Add(p3);
             view6.mesh.Positions.Add(p4);
-            view6.offset.OffsetX = -4.4;
-            view6.offset.OffsetY = -1.3;
+            view6.offset.OffsetX = -6.55;
+            view6.offset.OffsetY = -1.92;
             view6.offset.OffsetZ = -20;
             view6.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\054A隐身护卫舰.jpg", UriKind.RelativeOrAbsolute));
             offset_sin6.uuid = view6.guid;
             viewconter.Children.Add(view6.viewport);
+
+
+            ViewportCtl view7 = new ViewportCtl();
+            view7.Name = "view7";
+            p1 = new Point3D(-1, 1, -0.01);
+            p2 = new Point3D(0, -1, -0.01);
+            p3 = new Point3D(0, -1, -0.01);
+            p4 = new Point3D(1, 1, -0.01);
+            view7.mesh.Positions.Clear();
+            view7.mesh.Positions.Add(p1);
+            view7.mesh.Positions.Add(p2);
+            view7.mesh.Positions.Add(p3);
+            view7.mesh.Positions.Add(p4);
+            view7.offset.OffsetX = -3.32;
+            view7.offset.OffsetY = -3.06;
+            view7.offset.OffsetZ = -10;
+            view7.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\054A隐身护卫舰.jpg", UriKind.RelativeOrAbsolute));
+            offset_sin7.uuid = view7.guid;
+            viewconter.Children.Add(view7.viewport);
+
+
+            ViewportCtl view8 = new ViewportCtl();
+            view8.Name = "view8";
+            p1 = new Point3D(0, 1, -0.01);
+            p2 = new Point3D(-1, -1, -0.01);
+            p3 = new Point3D(1, -1, -0.01);
+            p4 = new Point3D(0, 1, -0.01);
+            view8.mesh.Positions.Clear();
+            view8.mesh.Positions.Add(p1);
+            view8.mesh.Positions.Add(p2);
+            view8.mesh.Positions.Add(p3);
+            view8.mesh.Positions.Add(p4);
+            view8.offset.OffsetX = -3.33;
+            view8.offset.OffsetY = -1.06;
+            view8.offset.OffsetZ = -10;
+            view8.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\054A隐身护卫舰.jpg", UriKind.RelativeOrAbsolute));
+            offset_sin8.uuid = view8.guid;
+            viewconter.Children.Add(view8.viewport);
+
+
+            ViewportCtl view9 = new ViewportCtl();
+            view9.Name = "view9";
+            p1 = new Point3D(0, 1, -0.01);
+            p2 = new Point3D(-1, -1, -0.01);
+            p3 = new Point3D(1, -1, -0.01);
+            p4 = new Point3D(0, 1, -0.01);
+            view9.mesh.Positions.Clear();
+            view9.mesh.Positions.Add(p1);
+            view9.mesh.Positions.Add(p2);
+            view9.mesh.Positions.Add(p3);
+            view9.mesh.Positions.Add(p4);
+            view9.offset.OffsetX = -3;
+            view9.offset.OffsetY = -3.5;
+            view9.offset.OffsetZ = -20;
+            view9.picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"images\054A隐身护卫舰.jpg", UriKind.RelativeOrAbsolute));
+            offset_sin9.uuid = view9.guid;
+            viewconter.Children.Add(view9.viewport);
 
             PublicClass.Offset_List.Add(offset_sin1);
             PublicClass.Offset_List.Add(offset_sin2);
@@ -228,12 +291,15 @@ namespace 防空
             PublicClass.Offset_List.Add(offset_sin4);
             PublicClass.Offset_List.Add(offset_sin5);
             PublicClass.Offset_List.Add(offset_sin6);
+            PublicClass.Offset_List.Add(offset_sin7);
 
             clouds();
             timer.Interval = 3000;
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             timer.Start();
         }
+
+
 
         void view_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -455,7 +521,7 @@ namespace 防空
         {
 
 
-            Random rand = new Random(unchecked((int)DateTime.Now.Ticks));
+            //Random rand = new Random(unchecked((int)DateTime.Now.Ticks));
             //for (int i = 0; i < 360; )
             //{
             //    Sunshine shine = new Sunshine();
@@ -463,18 +529,172 @@ namespace 防空
             //    viewconter.Children.Add(shine.viewport);
             //    i += rand.Next(10, 30);
             //}
-            for (int i = 0; i < 360; )
+            //for (int i = 0; i < 360; )
+            //{
+            //    Sunshine2D shine = new Sunshine2D();
+            //    shine.rotate.Angle = i;
+            //    shine.SnapsToDevicePixels = true;
+
+            //    //shine.Width = 600;
+            //    //shine.Height = 60;
+            //    shine.Margin = new Thickness(945, 180, 0, 0);
+            //    maincanvas.Children.Add(shine);
+            //    i += rand.Next(5, 20);
+            //}
+                            byte[] buffer = Guid.NewGuid().ToByteArray();
+                Int64 newguid = BitConverter.ToInt64(buffer, 0);
+                int intguid = int.Parse(newguid.ToString().Substring(0, 8));
+                Random rand = new Random(intguid);
+
+            for (int i = 1; i < 24; i++)
             {
                 Sunshine2D shine = new Sunshine2D();
-                shine.rotate.Angle = i;
-                shine.SnapsToDevicePixels = true;
+                shine.set_sunshine(i);
+                LinearGradientBrush grad = new LinearGradientBrush();
+                GradientStop stop1 = new GradientStop();
+                stop1.Offset = 0;
+                stop1.Color = Colors.White;
+                GradientStop stop2 = new GradientStop();
+                stop2.Offset = 1;
+                stop2.Color = Colors.Transparent;
 
-                //shine.Width = 600;
-                //shine.Height = 60;
-                shine.Margin = new Thickness(945, 180, 0, 0);
+                DoubleAnimation animation = new DoubleAnimation();
+                animation.From = 0;
+                animation.To = 2;
+                animation.Duration = TimeSpan.FromSeconds(10);
+                animation.AutoReverse = true;
+                animation.RepeatBehavior = RepeatBehavior.Forever;
+                animation.Duration = TimeSpan.FromSeconds(rand.Next(3, 10));
+                //animation.Duration = TimeSpan.FromSeconds(1);
+                animation.From = ((double)rand.Next(0, 5) / 10d);
+
+
+
+
+
+
+                switch (i)
+                {
+                    case 1:
+                        shine.Margin = new Thickness(945, 180, 0, 0);
+                        break;
+                    case 2:
+                        shine.Margin = new Thickness(945, 130, 0, 0);
+                        break;
+                    case 3:
+                        shine.Margin = new Thickness(945, 50, 0, 0);
+                        break;
+                    case 4:
+                        shine.Margin = new Thickness(945, -45, 0, 0);
+                        break;
+                    case 5:
+                        shine.Margin = new Thickness(945, -90, 0, 0);
+                        break;
+                    case 6:
+                        shine.Margin = new Thickness(945, -90, 0, 0);
+                        break;
+                    case 7:
+                        shine.Margin = new Thickness(950, -110, 0, 0);
+                        grad.StartPoint = new Point(0, 0.5);
+                        grad.EndPoint = new Point(1, 0.5);
+                        break;
+                    case 8:
+                        shine.Margin = new Thickness(950, -280, 0, 0);
+                        grad.StartPoint = new Point(0, 1);
+                        grad.EndPoint = new Point(1, 0.5);
+                        break;
+                    case 9:
+                        shine.Margin = new Thickness(770, -230, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0);
+                        break;
+                    case 10:
+                        shine.Margin = new Thickness(785, -90, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0);
+                        break;
+                    case 11:
+                        shine.Margin = new Thickness(610, -95, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0);
+                        break;
+                    case 12:
+                        shine.Margin = new Thickness(450, -110, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0);
+                        break;
+                    case 13:
+                        shine.Margin = new Thickness(440, 55, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0);
+                        break;
+                    case 14:
+                        shine.Margin = new Thickness(445, 125, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0.5);
+                        break;
+                    case 15:
+                        shine.Margin = new Thickness(475, 165, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0.5);
+                        break;
+                    case 16:
+                        shine.Margin = new Thickness(530, 170, 0, 0);
+                        grad.StartPoint = new Point(1, 1);
+                        grad.EndPoint = new Point(0, 0.5);
+                        break;
+                    case 17:
+                        shine.Margin = new Thickness(680, 160, 0, 0);
+                        grad.StartPoint = new Point(1, 0);
+                        grad.EndPoint = new Point(0, 1);
+                        break;
+                    case 18:
+                        shine.Margin = new Thickness(770, 170, 0, 0);
+                        grad.StartPoint = new Point(1, 0);
+                        grad.EndPoint = new Point(1, 0.5);
+                        break;
+                    case 19:
+                        shine.Margin = new Thickness(765, 170, 0, 0);
+                        grad.StartPoint = new Point(1, 0);
+                        grad.EndPoint = new Point(1, 0.5);
+                        break;
+                    case 20:
+                        shine.Margin = new Thickness(950, 170, 0, 0);
+                        grad.StartPoint = new Point(0, 0);
+                        grad.EndPoint = new Point(1, 1);
+                        break;
+                    case 21:
+                        shine.Margin = new Thickness(950, 170, 0, 0);
+                        grad.StartPoint = new Point(0, 0);
+                        grad.EndPoint = new Point(1, 1);
+                        break;
+                    case 22:
+                        shine.Margin = new Thickness(945, 170, 0, 0);
+                        grad.StartPoint = new Point(0, 0);
+                        grad.EndPoint = new Point(1, 1);
+                        break;
+                    case 23:
+                        shine.Margin = new Thickness(945, 170, 0, 0);
+                        grad.StartPoint = new Point(0, 0);
+                        grad.EndPoint = new Point(1, 1);
+                        break;
+                    case 24:
+                        shine.Margin = new Thickness(945, 170, 0, 0);
+                        grad.StartPoint = new Point(0, 0);
+                        grad.EndPoint = new Point(1, 1);
+                        break;
+                }
+
+
+                stop2.BeginAnimation(GradientStop.OffsetProperty, animation);
+
+                grad.GradientStops.Add(stop1);
+                grad.GradientStops.Add(stop2);
+                shine.picturename.OpacityMask = grad;
                 maincanvas.Children.Add(shine);
-                i += rand.Next(5, 20);
             }
+
+
 
         }
 

@@ -17,6 +17,8 @@
             <Image Source="/防空;component/image/rmfkzs_back.png" x:Name="rm_img1" Width="800" Margin="560,400,0,0" Opacity="1">
             
             </Image>
+            <Image Source="/防空;component/image/shape1.png" Margin="170,120,0,0"></Image>
+            <Image Source="/防空;component/image/shape2.png" Margin="0,-80,0,0"></Image>
             <Image Source="/防空;component/image/rmfkzs_back.png" x:Name="rm_img0" Width="800" Margin="560,400,0,0" Opacity="0.2" RenderTransformOrigin="0.5,0.83">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -74,6 +76,20 @@
                         </EventTrigger.Actions>
                     </EventTrigger>
                 </Image.Triggers>
+            </Image>
+            <Image Source="/防空;component/image/rect.png" Margin="-240,900,0,0">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="-4">
+                        
+                    </RotateTransform>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/防空;component/image/rect.png" Margin="-195,750,0,0">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="-4">
+
+                    </RotateTransform>
+                </Image.RenderTransform>
             </Image>
             <!--<TextBlock  Text="人民防空知识" FontSize="90" Foreground="Red"  FontFamily="Arial Unicode MS" Margin="560,400,0,0" Opacity="1">
                 

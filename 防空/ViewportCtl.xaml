@@ -18,10 +18,22 @@
 
                 <!--<Button>asf</Button>-->
                 <Canvas>
-                    <Image Name="picturename" IsManipulationEnabled="True" Initialized="picturename_Initialized" ManipulationCompleted="picturename_ManipulationCompleted" ManipulationDelta="picturename_ManipulationDelta" ManipulationStarting="picturename_ManipulationStarting" MouseLeftButtonDown="picturename_MouseLeftButtonDown" PreviewTouchDown="picturename_PreviewTouchDown" PreviewMouseLeftButtonDown="picturename_PreviewMouseLeftButtonDown" MouseMove="picturename_MouseMove">
+                    <TextBox x:Name="txt" Width="0" Height="0"></TextBox>
+                    <Image Name="picturename" IsManipulationEnabled="True" Initialized="picturename_Initialized" ManipulationCompleted="picturename_ManipulationCompleted" ManipulationDelta="picturename_ManipulationDelta" ManipulationStarting="picturename_ManipulationStarting" MouseLeftButtonDown="picturename_MouseLeftButtonDown" PreviewTouchDown="picturename_PreviewTouchDown" PreviewMouseLeftButtonDown="picturename_PreviewMouseLeftButtonDown" MouseMove="picturename_MouseMove" MouseUp="picturename_MouseUp">
                     <Image.Effect>
                         <DropShadowEffect Color="White" Direction="0" BlurRadius="40" ShadowDepth="0"></DropShadowEffect>
                     </Image.Effect>
+                        <Image.OpacityMask>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop x:Name="s1" Offset="-1" Color="White"></GradientStop>
+                                <GradientStop x:Name="s2" Offset="-0.9" Color="#99FFFFFF"></GradientStop>
+                                <GradientStop x:Name="s3" Offset="-0.8" Color="White"></GradientStop>
+                                <GradientStop x:Name="s4" Offset="-0.5" Color="White"></GradientStop>
+                                <GradientStop x:Name="s5" Offset="-0.4" Color="#99FFFFFF"></GradientStop>
+                                <GradientStop x:Name="s6" Offset="-0.3" Color="White"></GradientStop>
+                            </LinearGradientBrush>
+                        </Image.OpacityMask>
+
                     
                 </Image>
                     <!--<Rectangle x:Name="rect" Width="1" Height="1" Opacity="1" >

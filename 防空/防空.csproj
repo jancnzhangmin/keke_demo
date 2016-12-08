@@ -142,6 +142,13 @@
   <ItemGroup>
     <Resource Include="image\rmfkzs_font.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\rect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\shape1.png" />
+    <Resource Include="image\shape2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -28,15 +28,33 @@ namespace 防空
 
         Timer timer = new Timer();
         double scale = 1;
-        
+
+
+        public void set_sunshine(int line)
+        {
+            picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"sunshine\s" + line + ".png", UriKind.RelativeOrAbsolute));
+        }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            //BitmapImage bitimg = new BitmapImage();
+            //byte[] buffer = Guid.NewGuid().ToByteArray();
+            //Int64 newguid = BitConverter.ToInt64(buffer, 0);
+            //int intguid = int.Parse(newguid.ToString().Substring(0, 8));
+            //Random rand = new Random(intguid);
+            //int myrand = rand.Next(1, 8);
+            //bitimg.BeginInit();
+            //bitimg.UriSource = new Uri(AppDomain.CurrentDomain.BaseDirectory + @"sunshine\s" + myrand + ".png", UriKind.RelativeOrAbsolute);
+            //bitimg.EndInit();
+            //picturename.Source = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + @"sunshine\s" + myrand + ".png", UriKind.RelativeOrAbsolute));
+            ////double c = bitimg.Width;
+            //picturename.Width = bitimg.Width;
+            //picturename.Height = bitimg.Height;
             timer.Interval = 3000;
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             timer.Start();
-            
-            //change_image();
+
+            change_image();
             
         }
 
@@ -64,14 +82,15 @@ namespace 防空
 
 
                 DoubleAnimation opt = new DoubleAnimation();
-                opt.To = (double)rand.Next(0,100)/500d;
-                opt.Duration = TimeSpan.FromSeconds(2);
+                opt.To = (double)rand.Next(0,100)/100d;
+                opt.Duration = TimeSpan.FromSeconds(rand.Next(1,5));
                 picturename.BeginAnimation(Image.OpacityProperty, opt);
 
                 DoubleAnimation wid = new DoubleAnimation();
                 //wid.From = 600;
                 wid.To = 600d * scale;
                 wid.Duration = TimeSpan.FromSeconds(5);
+
                 //wid.FillBehavior = FillBehavior.HoldEnd;
                 //wid.RepeatBehavior = RepeatBehavior.Forever;
                
@@ -89,14 +108,14 @@ namespace 防空
 
 
                     DoubleAnimation scanX = new DoubleAnimation();
-                    scanX.To = scale*1.5d;
+                    scanX.To = scale;
                     scanX.Duration = TimeSpan.FromSeconds(5);
-                    scal.BeginAnimation(ScaleTransform.ScaleXProperty, scanX);
+                    //scal.BeginAnimation(ScaleTransform.ScaleXProperty, scanX);
 
                     DoubleAnimation scanY = new DoubleAnimation();
-                    scanY.To = scale*1.5d;
+                    scanY.To = scale;
                     scanY.Duration = TimeSpan.FromSeconds(5);
-                    scal.BeginAnimation(ScaleTransform.ScaleYProperty, scanY);
+                    //scal.BeginAnimation(ScaleTransform.ScaleYProperty, scanY);
 
                 //}
 
